@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: 'world_x'
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpass
+      MYSQL_ROOT_PASSWORD: testsuperpass
+    ports:
+      - "3306:3306"
+    expose:
+      - '3306'
