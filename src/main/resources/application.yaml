@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost:3306/world_x
+    username: testuser
+    password: testpass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        jdbc:
+          time_zone: UTC
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  sql:
+    init:
+      platform: mysql
+      mode: always
+
